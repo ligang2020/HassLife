@@ -1,0 +1,9 @@
+docker run -d \
+  --name mt-photos \
+  -v /volume1/docker/mt_photos/config:/config \
+  -v /volume1/docker/mt_photos/upload:/upload \
+  -v /volume1/Photos \
+  -p 8063:8063 \
+  -e TZ=Asia/Shanghai \ 
+  --restart unless-stopped \
+  mtphotos/mt-photos
